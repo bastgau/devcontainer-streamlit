@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Streamlit",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/bin/streamlit",
+      "args": [
+        "run",
+        "${workspaceFolder}/src/main.py"
+      ],
+      "preLaunchTask": "pip install"
+    }
+  ]
+}

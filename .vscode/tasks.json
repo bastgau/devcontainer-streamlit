@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pip install",
+      "type": "shell",
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/python -m pip install -r requirements.txt"
+      },
+    }
+  ]
+}
