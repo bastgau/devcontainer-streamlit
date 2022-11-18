@@ -1,5 +1,5 @@
 # See here for image contents:
-FROM mcr.microsoft.com/azure-functions/python:4-python3.9-core-tools
+FROM mcr.microsoft.com/devcontainers/python:3.9
 WORKDIR /workspaces/app
 
 ARG WORKSPACE_FOLDER="/workspaces/app"
