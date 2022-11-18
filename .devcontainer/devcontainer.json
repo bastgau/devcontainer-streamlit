@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/azure-functions-python-3
 {
-	"name": "Azure Functions & Python 3",
+	"name": "Streamlit & Python 3",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/app,type=bind",
 	"workspaceFolder": "/workspaces/app",
 	"build": {
@@ -9,7 +9,7 @@
 		"context": ".."
 	},
 	"forwardPorts": [
-		7071
+		8501
 	],
 	// Configure tool-specific properties.
 	"customizations": {
