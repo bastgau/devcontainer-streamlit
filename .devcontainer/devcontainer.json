@@ -1,5 +1,5 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/azure-functions-python-3
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3
 {
 	"name": "Streamlit & Python 3",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/app,type=bind",
@@ -17,11 +17,8 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-azuretools.vscode-azurefunctions",
-				"ms-azuretools.vscode-docker",
-				"ms-azuretools.vscode-azureresourcegroups",
-				"ms-vscode.azure-account",
-				"ms-python.python"
+				"ms-python.python",
+				"ms-python.vscode-pylance"
 			]
 		}
 	},

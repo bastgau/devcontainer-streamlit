@@ -1,13 +1,22 @@
 # See here for image contents:
-FROM mcr.microsoft.com/devcontainers/python:3.9
-WORKDIR /workspaces/app
+ARG VARIANT="3.9"
+FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
+WORKDIR /workspaces/app
 ARG WORKSPACE_FOLDER="/workspaces/app"
+
+# Install program dependencies:
+
+RUN mkdir /tmp/config_container
+
+COPY /.devcontainer/install-deps.sh /tmp/config_container/install-deps.sh
+RUN chmod +x /tmp/config_container/install-deps.sh
+RUN /tmp/config_container/install-deps.sh
+
+RUN rm -rvf /tmp/config_container
+
+# Create virtual environment:
+
 VOLUME $WORKSPACE_FOLDER/.venv
 
 EXPOSE 8501
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    software-properties-common \
-    && rm -rf /var/lib/apt/lists/*
